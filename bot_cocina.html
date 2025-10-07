@@ -1,70 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChefBot</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #chefbot-widget {
-            width: 100%;
-            max-width: 800px;
-            height: 600px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        /* Asegurar que el bot ocupe todo el contenedor */
-        #chefbot-widget iframe,
-        #chefbot-widget > div {
-            width: 100% !important;
-            height: 100% !important;
-            border: none !important;
-            border-radius: 15px !important;
-        }
-    </style>
-</head>
+<html>
+<head><title>Test ChefBot</title></head>
 <body>
-    <!-- ChefBot Widget como módulo principal -->
-    <div id="chefbot-widget"></div>
-    
-    <script>
-        // Cargar el widget de ChefBot como módulo principal
-        (function() {
-            const script = document.createElement('script');
-            script.src = 'https://bot-cocina.vercel.app/widget.js';
-            script.onload = function() {
-                console.log('ChefBot widget cargado correctamente');
-                // Inicializar el widget en modo full
-                if (window.ChefBotWidget) {
-                    window.ChefBotWidget.init({
-                        mode: 'fullscreen',
-                        container: 'chefbot-widget',
-                        autoOpen: true
-                    });
-                }
-            };
-            script.onerror = function() {
-                console.error('Error cargando ChefBot widget');
-            };
-            document.head.appendChild(script);
-        })();
-    </script>
+  <script src="https://bot-cocina.vercel.app/widget.js"></script>
 </body>
 </html>
