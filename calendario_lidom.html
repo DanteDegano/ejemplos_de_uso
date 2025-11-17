@@ -4,9 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Widget Calendario LIDOM</title>
+  <style>
+    .widget-container {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .widget-container h2 {
+      margin-top: 0;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <div id="mlb-calendario-widget"></div>
-  <script src="https://lidom.vercel.app/api/widgets/calendario"></script>
+  <div class="widget-container">
+    <h2>Calendario LIDOM</h2>
+    <div id="mlb-calendario-widget"></div>
+    <script src="https://lidom-one.vercel.app/api/w/widget_pizarra_calendario.js" data-autorun="true"></script>
+  </div>
+
+  <div class="widget-container">
+    <h2>Resultados Finales LIDOM</h2>
+    <div id="mlb-resultados-widget"></div>
+    <script src="https://lidom-one.vercel.app/api/w/widget_pizarra_resultados.js"></script>
+    <script>
+      window.widget_resultados(undefined, document.getElementById('mlb-resultados-widget'));
+    </script>
+  </div>
+
+  <div class="widget-container">
+    <h2>Posiciones LIDOM</h2>
+    <div id="mlb-posiciones-widget"></div>
+    <script src="https://lidom-one.vercel.app/api/w/widget_posiciones.js"></script>
+    <script>
+      window.widget_posiciones_lidom(document.getElementById('mlb-posiciones-widget'));
+    </script>
+  </div>
+
+  <div class="widget-container">
+    <h2>Posiciones LIDOM (iframe)</h2>
+    <div id="widget-wrapper-iframe-posiciones"></div>
+    <script src="https://lidom-one.vercel.app/api/w/widget_wrapper_iframe_posiciones.js"></script>
+    <script>
+      window.widget_wrapper_iframe_posiciones('widget-wrapper-iframe-posiciones');
+    </script>
+  </div>
 </body>
 </html>
