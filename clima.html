@@ -1,20 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Juan Weather Widget - Home Design</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            min-height: 100vh;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Demo Widgets Clima San Juan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: #f7f7f7;
+    }
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+    nav {
+      width: 220px;
+      background: #e3eafc;
+      padding: 24px 12px;
+      box-shadow: 2px 0 8px #0001;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    main {
+      flex: 1;
+      padding: 32px;
+      background: #fff;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    aside {
+      width: 300px;
+      background: #f0f4f8;
+      padding: 24px 12px;
+      box-shadow: -2px 0 8px #0001;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
 <body>
-    <div data-rw-widget></div>
-    <script src="https://clima-san-juan.vercel.app/static/widget_home.js"></script>
+  <div class="layout">
+    <nav>
+      <h2>Nav</h2>
+      <!-- Widget Mini -->
+      <script src="https://clima-san-juan.vercel.app/widget_mini.js"></script>
+    </nav>
+    <main>
+      <div>
+        <h1>Widget Extendido</h1>
+        <!-- Widget Extendido -->
+        <script src="https://clima-san-juan.vercel.app/widget_extendido.js"></script>
+      </div>
+    </main>
+    <aside>
+      <h2>Aside</h2>
+      <!-- Widget Home -->
+      <script src="https://clima-san-juan.vercel.app/widget_home.js"></script>
+    </aside>
+  </div>
 </body>
 </html>
